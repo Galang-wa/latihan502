@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+ 
+  <h2>Hitung Ruas persegi</h2>
+<form>
+    <label>Nilai panjang </label>
+    <input type="text" id="nPJ">
+    
+    <label>Nilai Lebar</label>
+    <input type="text" id="nLB">
+
+  </form>
+    <div id="hasil">Hasil hitung luas persegi</div>
+    <button type="button" onclick="hitungluas()" class="btnhitung">hitung luas</button>
+
+<script>
+  function hitungluas(){
+    let pj = document.getElementById("nPJ").value
+    let lb = document.getElementById("nLB").value
+
+    let lu = pj*lb;
+    let pjlb = parseFloat(pj)+Number(lb)
+    let lbpj =pj+lb
+    let kll = 2*pjlb
+    console.log(pjlb)
+
+    let hsl="Hitung Luas Persegi dengan Nilai<br>"
+        hsl+= "panjang: "+ pj +"cm;<br> Lebar: "+ lb +"cm;"
+        hsl+= "luas = panjang X lebar<br>"
+        hsl+= "luas = " + pj + " X " + lb + "<br>"
+        hsl+= "luas = " + lu + "cm<sup>2</sup><br>"
+        hsl+= "hitung keliling persegi<br>"
+        hsl+= "keliling = 2 X (panjang + lebar)<br>"
+        hsl+= "keliling = 2 X (" + pj + " + " + lb + ")<br>"
+        hsl+= "keliling = 2 X " + pjlb + "<br>"
+        hsl+= "keliling = " + kll + " cm<br>"
+        
+    document.getElementById("hasil").innerHTML = hsl
+  }
+</script>
+
+
+</body>
+</html>
